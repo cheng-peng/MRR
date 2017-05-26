@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+
+    defaultConfig {
+        applicationId "com.cxp.mrr"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        config  {
+            storeFile file("../appKey.jks")
+            storePassword "qq123456"
+            keyAlias "appKey"
+            keyPassword "qq123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false  //true为删除没有使用到的资源文件
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.cxp.mrr.gen'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    //google
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    //butterknife
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    compile 'com.jakewharton:butterknife:8.2.1'
+    //retrofit2
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    //rxjava
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.0'
+    //okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //gson
+    compile 'com.google.code.gson:gson:2.6.2'
+    //stetho 查看数据库
+    compile 'com.facebook.stetho:stetho:1.4.1'
+    //stetho 查看网络请求
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.1'
+    //greendao
+    compile 'org.greenrobot:greendao:3.1.1'
+    //jsoup
+    compile 'org.jsoup:jsoup:1.10.2'
+
+    // Dagger2
+    compile 'com.google.dagger:dagger:2.4'
+    apt 'com.google.dagger:dagger-compiler:2.4'
+    //java注解
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+}
