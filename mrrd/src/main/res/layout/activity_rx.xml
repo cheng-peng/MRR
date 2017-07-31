@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="普通请求" />
+
+    <Button
+        android:id="@+id/bt_click1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接@Path占位符请求" />
+
+    <Button
+        android:id="@+id/bt_click2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接@Query传参请求" />
+
+    <Button
+        android:id="@+id/bt_click4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接@QueryMap传递多个参数请求" />
+
+
+    <Button
+        android:id="@+id/bt_click3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接@Filed表单传递" />
+
+    <Button
+        android:id="@+id/bt_click5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接@FiledMap 表单多个参数传递" />
+
+    <Button
+        android:id="@+id/bt_click6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接@Multipart 单文件上传" />
+
+    <Button
+        android:id="@+id/bt_click7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接@MultipartMap 多文件上传" />
+
+    <Button
+        android:id="@+id/bt_click8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下载文件" />
+
+</LinearLayout>

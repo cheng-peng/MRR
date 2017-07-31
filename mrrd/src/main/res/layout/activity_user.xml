@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_user_add_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增加一条数据" />
+
+    <Button
+        android:id="@+id/bt_user_delete_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除一条数据" />
+
+
+    <Button
+        android:id="@+id/bt_user_update_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改一条数据" />
+
+    <Button
+        android:id="@+id/bt_user_selece_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询一条数据" />
+
+    <Button
+        android:id="@+id/bt_user_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增加多条数据" />
+
+    <Button
+        android:id="@+id/bt_user_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除多条数据" />
+
+    <Button
+        android:id="@+id/bt_user_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改多条数据" />
+
+    <Button
+        android:id="@+id/bt_user_selece"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询多条数据" />
+</LinearLayout>

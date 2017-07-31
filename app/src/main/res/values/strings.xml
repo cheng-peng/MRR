@@ -1,4 +1,0 @@
-<resources>
-    <string name="app_name">MRR</string>
-    <string name="net_error">请求失败，请检查您的网络!~</string>
-</resources>
